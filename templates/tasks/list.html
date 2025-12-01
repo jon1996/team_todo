@@ -1,0 +1,14 @@
+<h1>Liste des tâches</h1>
+
+<ul>
+  {% for task in tasks %}
+    <li>
+      {{ task.title }} –
+      {% if task.completed %}
+        ✔️ Terminée
+      {% else %}
+        ❌ Non terminée
+      {% endif %}
+    </li>
+  {% endfor %}
+</ul>
